@@ -1,0 +1,280 @@
+<style>
+  .what-our-client-says .page-width{
+    padding:0 !important;
+  }
+  
+  .what-our-client-says{
+    background:url({{ section.settings.bg-img | img_url: '2048x'}}) no-repeat;
+    width: 100%;
+    min-height: 400px;
+    background-size: 100% 100%;  
+    position:relative;
+    padding-top: 50px;
+    padding-bottom: 40px;  
+  }
+
+ .what-our-client-says .introduction {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+  }
+
+  .what-our-client-says .introduction .heading {
+      color: #fff;
+      font-size: 45px;
+      font-weight: 900;
+  }
+
+  .what-our-client-says .desc {
+      font-size: 18px;
+      color: #fff;
+      line-height: 24.2px;
+      font-weight: 500;
+  }    
+
+  .testimonials{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 50px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+  }  
+
+  .inner-testionials {
+      box-shadow: #0091FF -1px 1px 12px!important;
+      border: 5px solid #0091FF;
+      border-radius: 20px;
+      color:#fff;
+      background:#232323;
+  } 
+
+  .inner-testionials .header{
+    display: grid;
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .inner-testionials .header .photo img {
+      max-width: 71px;
+  }
+  
+  .inner-testionials .header .photo {
+      padding-top: 20px;
+      padding-left: 15px;
+  }
+
+  .inner-testionials .header .svg {
+      padding-top: 20px;
+      padding-right: 15px;
+      text-align: right;
+  }
+
+  .inner-testionials .header .svg svg {
+      width: 35px;
+      height: 35px;
+  }
+
+  .inner-testionials .details {
+      padding: 0 15px;
+      padding-top: 20px;
+  }
+
+ .inner-testionials  .heading {
+      font-size: 25px;
+      font-weight: 900;
+  }
+
+  .inner-testionials .testi {
+      font-size: 17px;
+      line-height: 22.2px;
+      font-weight: 500;
+  }
+
+  .inner-testionials .testi p {
+      margin-top: 0px;
+  }
+
+  @media(max-width:1000px){
+    .testimonials {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+  }
+  
+  @media(max-width:767px){
+    .what-our-client-says .introduction .heading {
+        font-size: 28px;
+        line-height: 30px;
+    }
+
+    .testimonials {
+        grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+</style>
+
+<div class="what-our-client-says">
+   <div class="page-width">
+      <div class="introduction">
+        <div class="heading"> {{ section.settings.heading }} </div>
+        <div class="desc"> {{ section.settings.description }} </div>
+      </div>
+
+     <div class="testimonials">
+       <div class="inner-testionials">
+         <div class="header"> 
+           <div class="photo">
+             <img src="{{ section.settings.img1 | img_url: '200x'}}">
+           </div>
+           <div class="svg">
+             <svg width="60" height="52" viewBox="0 0 60 52" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M54.375 0H39.375C36.2695 0 33.75 2.49554 33.75 5.57143V20.4286C33.75 23.5045 36.2695 26 39.375 26H48.75V33.4286C48.75 37.5259 45.3867 40.8571 41.25 40.8571H40.3125C38.7539 40.8571 37.5 42.0991 37.5 43.6429V49.2143C37.5 50.758 38.7539 52 40.3125 52H41.25C51.6094 52 60 43.6893 60 33.4286V5.57143C60 2.49554 57.4805 0 54.375 0ZM20.625 0H5.625C2.51953 0 0 2.49554 0 5.57143V20.4286C0 23.5045 2.51953 26 5.625 26H15V33.4286C15 37.5259 11.6367 40.8571 7.5 40.8571H6.5625C5.00391 40.8571 3.75 42.0991 3.75 43.6429V49.2143C3.75 50.758 5.00391 52 6.5625 52H7.5C17.8594 52 26.25 43.6893 26.25 33.4286V5.57143C26.25 2.49554 23.7305 0 20.625 0Z" fill="white"/></svg>
+           </div>
+         </div>
+         <div class="details">
+            <div class="heading"> {{ section.settings.heading1 }} </div>
+            <div class="testi"> {{ section.settings.review1 }} </div>
+         </div> 
+       </div>
+
+       <div class="inner-testionials">
+         <div class="header"> 
+           <div class="photo">
+             <img src="{{ section.settings.img1 | img_url: '200x'}}">
+           </div>
+           <div class="svg">
+             <svg width="60" height="52" viewBox="0 0 60 52" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M54.375 0H39.375C36.2695 0 33.75 2.49554 33.75 5.57143V20.4286C33.75 23.5045 36.2695 26 39.375 26H48.75V33.4286C48.75 37.5259 45.3867 40.8571 41.25 40.8571H40.3125C38.7539 40.8571 37.5 42.0991 37.5 43.6429V49.2143C37.5 50.758 38.7539 52 40.3125 52H41.25C51.6094 52 60 43.6893 60 33.4286V5.57143C60 2.49554 57.4805 0 54.375 0ZM20.625 0H5.625C2.51953 0 0 2.49554 0 5.57143V20.4286C0 23.5045 2.51953 26 5.625 26H15V33.4286C15 37.5259 11.6367 40.8571 7.5 40.8571H6.5625C5.00391 40.8571 3.75 42.0991 3.75 43.6429V49.2143C3.75 50.758 5.00391 52 6.5625 52H7.5C17.8594 52 26.25 43.6893 26.25 33.4286V5.57143C26.25 2.49554 23.7305 0 20.625 0Z" fill="white"/></svg>
+           </div>
+         </div>
+         <div class="details">
+            <div class="heading"> {{ section.settings.heading1 }} </div>
+            <div class="testi"> {{ section.settings.review1 }} </div>
+         </div> 
+       </div>
+
+       <div class="inner-testionials">
+         <div class="header"> 
+           <div class="photo">
+             <img src="{{ section.settings.img1 | img_url: '200x'}}">
+           </div>
+           <div class="svg">
+             <svg width="60" height="52" viewBox="0 0 60 52" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M54.375 0H39.375C36.2695 0 33.75 2.49554 33.75 5.57143V20.4286C33.75 23.5045 36.2695 26 39.375 26H48.75V33.4286C48.75 37.5259 45.3867 40.8571 41.25 40.8571H40.3125C38.7539 40.8571 37.5 42.0991 37.5 43.6429V49.2143C37.5 50.758 38.7539 52 40.3125 52H41.25C51.6094 52 60 43.6893 60 33.4286V5.57143C60 2.49554 57.4805 0 54.375 0ZM20.625 0H5.625C2.51953 0 0 2.49554 0 5.57143V20.4286C0 23.5045 2.51953 26 5.625 26H15V33.4286C15 37.5259 11.6367 40.8571 7.5 40.8571H6.5625C5.00391 40.8571 3.75 42.0991 3.75 43.6429V49.2143C3.75 50.758 5.00391 52 6.5625 52H7.5C17.8594 52 26.25 43.6893 26.25 33.4286V5.57143C26.25 2.49554 23.7305 0 20.625 0Z" fill="white"/></svg>
+           </div>
+         </div>
+         <div class="details">
+            <div class="heading"> {{ section.settings.heading1 }} </div>
+            <div class="testi"> {{ section.settings.review1 }} </div>
+         </div> 
+       </div>        
+
+       <div class="inner-testionials">
+         <div class="header"> 
+           <div class="photo">
+             <img src="{{ section.settings.img1 | img_url: '200x'}}">
+           </div>
+           <div class="svg">
+             <svg width="60" height="52" viewBox="0 0 60 52" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M54.375 0H39.375C36.2695 0 33.75 2.49554 33.75 5.57143V20.4286C33.75 23.5045 36.2695 26 39.375 26H48.75V33.4286C48.75 37.5259 45.3867 40.8571 41.25 40.8571H40.3125C38.7539 40.8571 37.5 42.0991 37.5 43.6429V49.2143C37.5 50.758 38.7539 52 40.3125 52H41.25C51.6094 52 60 43.6893 60 33.4286V5.57143C60 2.49554 57.4805 0 54.375 0ZM20.625 0H5.625C2.51953 0 0 2.49554 0 5.57143V20.4286C0 23.5045 2.51953 26 5.625 26H15V33.4286C15 37.5259 11.6367 40.8571 7.5 40.8571H6.5625C5.00391 40.8571 3.75 42.0991 3.75 43.6429V49.2143C3.75 50.758 5.00391 52 6.5625 52H7.5C17.8594 52 26.25 43.6893 26.25 33.4286V5.57143C26.25 2.49554 23.7305 0 20.625 0Z" fill="white"/></svg>
+           </div>
+         </div>
+         <div class="details">
+            <div class="heading"> {{ section.settings.heading1 }} </div>
+            <div class="testi"> {{ section.settings.review1 }} </div>
+         </div> 
+       </div>        
+       
+       
+     </div>
+     
+   </div>
+</div>  
+
+{% schema %}
+  {
+    "name": "What our client Says",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "bg-img",
+        "label": "background Image"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "description",
+        "label": "Description"
+      },
+      {
+        "type": "image_picker",
+        "id": "img1",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "heading1",
+        "label": "Review Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "review1",
+        "label": "Review"
+      },
+      {
+        "type": "image_picker",
+        "id": "img2",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "heading2",
+        "label": "Review Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "review2",
+        "label": "Review"
+      },
+      {
+        "type": "image_picker",
+        "id": "img3",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "heading3",
+        "label": "Review Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "review3",
+        "label": "Review"
+      },
+      {
+        "type": "image_picker",
+        "id": "img4",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "heading4",
+        "label": "Review Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "review4",
+        "label": "Review"
+      }
+      
+    ],
+    "presets": [
+    {
+      "name": "What our client Says",
+      "category": "About Us Page"
+    }
+  ]
+}
+{% endschema %}

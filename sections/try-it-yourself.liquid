@@ -1,0 +1,162 @@
+<style>
+.try-container {
+    display: flex;
+}
+  
+.try-heading {
+    display: flex;
+    flex-basis: 30%;
+    font-size: 35px;
+    font-weight: 900;
+    color: #070707;
+    line-height: 40px;
+}
+
+.try-details {
+    display: flex;
+    flex-basis: 50%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #070707;
+}
+
+.try-button {
+    display: flex;
+    flex-basis: 20%;
+    text-align: right;
+}
+
+.try-button a {
+    background: #141414;
+    color: #fff;
+    text-decoration: none !important;
+    padding: 7px 25px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 700;
+}  
+
+.try-yourself {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.try-yourself .page-width {
+    padding: 0;
+}
+
+section.color-scheme-fc068dc4-1058-4b2d-977b-95e10073bc56.gradient {
+  background: url(https://cyberkanna.com/cdn/shop/t/6/assets/pr_bg_2000x.png?v=2152011…) no-repeat;
+  background-size: 100% 100%;
+}  
+
+.featured-product:not(.product--no-media)>.product__info-wrapper {
+    padding: 0 !important;
+}  
+
+.product__text.caption-with-letter-spacing+.product__title {
+    margin-top: 0;
+    font-size: 40px;
+    font-weight: 900;
+    color: #fff;
+}
+
+.product__view-details {
+    color: #fff;
+    font-weight: 600;
+}  
+
+.product-media-container {
+    border: 2px solid #00FEFF;
+    box-shadow: #00FEFF -1px 1px 16px!important;
+    border-radius:10px;
+}  
+
+@media(max-width:767px){
+  .try-heading {
+      display: block;
+      width:100%;
+      font-size: 30px;
+      font-weight: 900;
+      color: #070707;
+      line-height: 40px;
+  }
+
+  .try-button {
+      display: block;
+      flex-basis: 100%;
+      text-align: center;
+      margin-top: 15px;
+  }
+
+  .try-details {
+      display: block;
+      flex-basis: 100%;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: #070707;
+      margin-top: 10px;
+      line-height: 20px;
+      margin-bottom: 25px;
+  }
+  
+  .try-container {
+      display: block;
+      text-align: center;
+  }
+}
+
+  
+</style>  
+
+
+<div class="try-yourself">
+  <div class="page-width">
+    <div class="try-container">
+      <div class="try-heading"> 
+        {{ section.settings.heading }}
+      </div>
+      <div class="try-details"> 
+        {{ section.settings.details }}
+      </div>
+      <div class="try-button"> 
+        <a href="{{ section.settings.btn-url }}"> {{ section.settings.btn-txt }} </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Try it yourself",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "details",
+        "label": "Details"
+      },
+      {
+        "type": "text",
+        "id": "btn-txt",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "btn-url",
+        "label": "Button Url"
+      }
+    ],
+    "presets": [
+    {
+      "name": "Try it yourself",
+      "category": "About Us Page"
+    }
+  ]
+}
+{% endschema %}

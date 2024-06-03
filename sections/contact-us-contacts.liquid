@@ -1,0 +1,159 @@
+<style>
+  .contactus{background:{{ section.settings.bg-color }};}  
+  .contact-us-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding-top: 80px;
+      padding-bottom: 90px;
+      gap: 60px;
+  }
+
+  .inner-contact-us {
+      border: 5px solid #00FEFF;
+      border-radius: 15px;
+      box-shadow: #00FEFF -1px 1px 15px!important;
+      padding-top: 30px;
+      text-align: center;
+  }
+
+  .inner-contact-us .svg svg {
+      width: 80px;
+      height: 80px;
+  }
+
+  .inner-contact-us .title {
+      margin: 0;
+      padding-top: 15px;
+      color: #fff;
+      font-size: 25px;
+      font-weight: 900;
+  }
+
+  .inner-contact-us .details {
+      color: #fff;
+      font-size: 20px;
+      margin-bottom: 20px;
+  }
+
+   @media(max-width:1000px){
+    .contact-us-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  
+  @media(max-width:767px){
+    .contact-us-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding-top: 50px;
+        padding-bottom: 50px;
+        gap: 60px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+  }
+
+  
+</style>
+<div class="contactus">
+  <div class="page-width">
+    <div class="contact-us-container">
+      <div class="inner-contact-us">
+        <div class="svg"> 
+          {{ section.settings.svg1 }}
+        </div>
+        <div class="title">
+          {{ section.settings.title1 }}
+        </div>
+        <div class="details">
+          {{ section.settings.details1 }}
+        </div>
+      </div>
+      <div class="inner-contact-us">
+        <div class="svg"> 
+          {{ section.settings.svg2 }}
+        </div>
+        <div class="title">
+          {{ section.settings.title2 }}
+        </div>
+        <div class="details">
+          {{ section.settings.details2 }}
+        </div>
+      </div>
+      <div class="inner-contact-us">
+        <div class="svg"> 
+          {{ section.settings.svg3 }}
+        </div>
+        <div class="title">
+          {{ section.settings.title3 }}
+        </div>
+        <div class="details">
+          {{ section.settings.details3 }}
+        </div>
+      </div>
+    </div> 
+  </div>
+</div>  
+
+{% schema %}
+  {
+    "name": "Contact Us Contacts",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg-color",
+        "label": "Background Color"
+      },
+      {
+        "type": "html",
+        "id": "svg1",
+        "label": "SVG"
+      },
+      {
+        "type": "text",
+        "id": "title1",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "details1",
+        "label": "Details"
+      },
+      {
+        "type": "html",
+        "id": "svg2",
+        "label": "SVG"
+      },
+      {
+        "type": "text",
+        "id": "title2",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "details2",
+        "label": "Details"
+      },
+      {
+        "type": "html",
+        "id": "svg3",
+        "label": "SVG"
+      },
+      {
+        "type": "text",
+        "id": "title3",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "details3",
+        "label": "Details"
+      }
+    ],
+    "presets": [
+    {
+      "name": "Contact Us Contacts",
+      "category": "Contact Us Page"
+    }
+  ]
+  }
+{% endschema %}
